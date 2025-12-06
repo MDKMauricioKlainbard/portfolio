@@ -174,15 +174,49 @@ export default function Portfolio() {
           </div>
           <h2 className="mb-12 font-mono text-3xl font-bold tracking-tight">About</h2>
 
-          <div className="max-w-3xl">
-            <p className="mb-6 text-lg leading-relaxed text-zinc-400">
-              I'm a 23-year-old Engineering student from Argentina, combining Systems Programming with a deep passion
-              for Physics and Pure Mathematics.
-            </p>
-            <p className="text-lg leading-relaxed text-zinc-200">
-              "I don't look for the easy path; I seek to understand how the universe works from the ground up,
-              implementing physical laws into code."
-            </p>
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+            {/* Left Column - Bio Text */}
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed text-zinc-300">
+                I'm a 23-year-old Engineering student from Argentina, combining Systems Programming with a deep passion
+                for Physics and Pure Mathematics.
+              </p>
+              <p className="text-base leading-relaxed text-zinc-400">
+                My approach to software engineering is rooted in understanding first principles. Rather than following shortcuts, I believe in comprehending the fundamental mechanics of systems—whether they're computational, physical, or mathematical.
+              </p>
+              <p className="text-base leading-relaxed text-zinc-400">
+                This philosophy drives my work on the Lagrangian Physics Engine and my continuous exploration of high-performance computing architectures.
+              </p>
+            </div>
+
+            {/* Right Column - Terminal Output Block */}
+            <div className="relative flex items-center">
+              <div className="relative w-full rounded-lg border border-accent/50 bg-zinc-950/80 p-6 shadow-lg backdrop-blur-sm transition-all hover:border-accent hover:shadow-glow">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 -z-10 rounded-lg bg-accent/10 blur-xl opacity-0 transition-opacity hover:opacity-100" />
+
+                <div className="mb-4 flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-accent/60 animate-pulse" />
+                  <span className="font-mono text-xs uppercase tracking-widest text-accent">CORE DIRECTIVE</span>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="font-mono text-sm leading-relaxed text-zinc-300">
+                    <span className="text-accent">$</span> <span className="text-green-400">philosophy</span>
+                    <span className="text-zinc-500"> --mode</span>
+                  </p>
+
+                  <blockquote className="border-l-2 border-accent/50 pl-4 font-mono text-sm text-zinc-200 italic">
+                    "I don't look for the easy path; I seek to understand how the universe works from the ground up,
+                    implementing physical laws into code."
+                  </blockquote>
+
+                  <div className="pt-2 font-mono text-xs text-accent">
+                    <span className="text-zinc-500">&gt;</span> system_initialized ✓
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>
@@ -468,61 +502,128 @@ export default function Portfolio() {
           </div>
           <h2 className="mb-12 font-mono text-3xl font-bold tracking-tight">Contact</h2>
 
-          <div className="max-w-2xl">
-            <p className="mb-8 text-lg text-zinc-400">
-              Interested in collaborating on physics simulations or computational research? Let's connect.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Button
-                variant="outline"
-                size="lg"
-                className="gap-2 border-zinc-700 bg-transparent font-mono hover:bg-zinc-900"
-                asChild
-              >
-                <a href="https://github.com/MDKMauricioKlainbard" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5" />
-                  GitHub
-                </a>
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="gap-2 border-zinc-700 bg-transparent font-mono hover:bg-zinc-900"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/mklainbard/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-5 w-5" />
-                  LinkedIn
-                </a>
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="gap-2 border-zinc-700 bg-transparent font-mono hover:bg-zinc-900"
-                asChild
-              >
-                <a href="mailto:mauricioklainbard01@gmail.com">
-                  <Mail className="h-5 w-5" />
-                  Email
-                </a>
-              </Button>
+          {/* Connection Hub Card */}
+          <div className="relative overflow-hidden rounded-xl border border-accent/30 bg-zinc-900/50 backdrop-blur-sm">
+            {/* Blueprint Grid Background */}
+            <div className="absolute inset-0 opacity-5">
+              <div
+                className="h-full w-full"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(99, 179, 237, 0.3) 1px, transparent 1px),
+                                   linear-gradient(90deg, rgba(99, 179, 237, 0.3) 1px, transparent 1px)`,
+                  backgroundSize: "40px 40px",
+                }}
+              />
             </div>
+
+            <div className="relative space-y-8 p-8 lg:p-12">
+              {/* Header */}
+              <div>
+                <div className="mb-4 flex items-center gap-2">
+                  <div className="rounded-md bg-accent/10 p-1.5">
+                    <Mail className="h-5 w-5 text-accent" />
+                  </div>
+                  <span className="font-mono text-xs uppercase tracking-wider text-accent">CONNECTION HUB</span>
+                </div>
+
+                <h3 className="mb-4 font-mono text-3xl font-bold">Let's Connect</h3>
+
+                <p className="max-w-2xl text-lg text-zinc-400">
+                  Interested in collaborating on physics simulations, computational research, or high-performance computing?
+                  I'm always open to discussing innovative projects and exploring new frontiers in systems engineering.
+                </p>
+              </div>
+
+              {/* Contact Buttons */}
+              <div className="grid gap-4 sm:grid-cols-3">
+                {/* GitHub Button */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <Button
+                    size="lg"
+                    asChild
+                    className="group relative h-auto w-full flex-col gap-3 border-accent/30 bg-zinc-950/50 px-6 py-8 font-mono text-base hover:border-accent hover:bg-accent/5 overflow-hidden"
+                    variant="outline"
+                  >
+                    <a href="https://github.com/MDKMauricioKlainbard" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 w-full">
+                      <div className="relative">
+                        <div className="absolute inset-0 rounded-lg bg-accent/20 blur-lg opacity-0 transition-opacity group-hover:opacity-100" />
+                        <Github className="relative h-8 w-8 text-accent transition-colors group-hover:text-accent" />
+                      </div>
+                      <span className="text-sm font-semibold">GitHub</span>
+                      <span className="text-xs text-zinc-500 font-mono">View projects</span>
+                    </a>
+                  </Button>
+                </motion.div>
+
+                {/* LinkedIn Button */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <Button
+                    size="lg"
+                    asChild
+                    className="group relative h-auto w-full flex-col gap-3 border-blue-400/30 bg-zinc-950/50 px-6 py-8 font-mono text-base hover:border-blue-400 hover:bg-blue-400/5 overflow-hidden"
+                    variant="outline"
+                  >
+                    <a href="https://www.linkedin.com/in/mklainbard/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 w-full">
+                      <div className="relative">
+                        <div className="absolute inset-0 rounded-lg bg-blue-400/20 blur-lg opacity-0 transition-opacity group-hover:opacity-100" />
+                        <Linkedin className="relative h-8 w-8 text-blue-400 transition-colors group-hover:text-blue-300" />
+                      </div>
+                      <span className="text-sm font-semibold text-blue-400">LinkedIn</span>
+                      <span className="text-xs text-zinc-500 font-mono">Connect professionally</span>
+                    </a>
+                  </Button>
+                </motion.div>
+
+                {/* Email Button */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <Button
+                    size="lg"
+                    asChild
+                    className="group relative h-auto w-full flex-col gap-3 border-green-400/30 bg-zinc-950/50 px-6 py-8 font-mono text-base hover:border-green-400 hover:bg-green-400/5 overflow-hidden"
+                    variant="outline"
+                  >
+                    <a href="mailto:mauricioklainbard01@gmail.com" className="flex flex-col items-center gap-3 w-full">
+                      <div className="relative">
+                        <div className="absolute inset-0 rounded-lg bg-green-400/20 blur-lg opacity-0 transition-opacity group-hover:opacity-100" />
+                        <Mail className="relative h-8 w-8 text-green-400 transition-colors group-hover:text-green-300" />
+                      </div>
+                      <span className="text-sm font-semibold text-green-400">Email</span>
+                      <span className="text-xs text-zinc-500 font-mono">Send a message</span>
+                    </a>
+                  </Button>
+                </motion.div>
+              </div>
+
+              {/* Footer Info */}
+              <div className="border-t border-zinc-800/50 pt-8">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-2">Location</p>
+                    <p className="font-mono text-sm text-zinc-300">Mendoza, Argentina</p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-2">Copyright</p>
+                    <p className="font-mono text-sm text-zinc-300">© 2025 — Crafted with precision</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Glow Effects */}
+            <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl" />
           </div>
         </motion.div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-zinc-800/50 py-8">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="font-mono text-sm text-zinc-500">© 2025 — Crafted with precision</p>
-            <p className="font-mono text-sm text-zinc-500">Mendoza, Argentina</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
