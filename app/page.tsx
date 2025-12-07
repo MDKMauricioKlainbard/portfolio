@@ -107,7 +107,7 @@ export default function Portfolio() {
           </div>
 
           {/* Right Side - Code Visualization */}
-          <motion.div variants={fadeInUp} className="relative">
+          <motion.div variants={fadeInUp} className="relative overflow-auto">
             <div className="relative rounded-xl border border-accent/30 bg-zinc-900/50 p-6 backdrop-blur-sm overflow-hidden">
               <div className="mb-4 flex items-center gap-2">
                 <div className="flex gap-1.5">
