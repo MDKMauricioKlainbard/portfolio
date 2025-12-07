@@ -95,7 +95,7 @@ export default function Portfolio() {
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-2 border-zinc-700 bg-transparent hover:bg-zinc-900"
+                className="gap-2 border-zinc-700 bg-transparent hover:bg-zinc-900 hover:text-accent"
                 asChild
               >
                 <a href="#contact">
@@ -356,7 +356,7 @@ export default function Portfolio() {
 
                 <Button
                   variant="outline"
-                  className="gap-2 border-accent/30 bg-transparent font-mono hover:bg-accent/10"
+                  className="gap-2 border-accent/30 bg-transparent font-mono hover:bg-accent/10 hover:text-accent"
                   asChild
                 >
                   <a href="https://github.com/MDKMauricioKlainbard/PhysicsEngine" target="_blank" rel="noopener noreferrer">
@@ -544,7 +544,7 @@ export default function Portfolio() {
                   <Button
                     size="lg"
                     asChild
-                    className="group relative h-auto w-full flex-col gap-3 border-accent/30 bg-zinc-950/50 px-6 py-8 font-mono text-base hover:border-accent hover:bg-accent/5 overflow-hidden"
+                    className="group relative h-auto w-full flex-col gap-3 border-accent/30 bg-zinc-950/50 px-6 py-8 font-mono text-base hover:border-accent hover:bg-accent/5 overflow-hidden hover:text-accent"
                     variant="outline"
                   >
                     <a href="https://github.com/MDKMauricioKlainbard" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 w-full">
