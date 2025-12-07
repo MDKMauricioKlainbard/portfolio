@@ -393,10 +393,10 @@ export default function Portfolio() {
                   <div className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4">
                     <div className="mb-2 flex items-center gap-2">
                       <Cpu className="h-4 w-4 text-accent" />
-                      <span className="font-mono text-xs text-zinc-500">Performance</span>
+                      <span className="font-mono text-xs text-zinc-500">Target Performance</span>
                     </div>
-                    <p className="font-mono text-2xl font-bold text-accent">10K+</p>
-                    <p className="font-mono text-xs text-zinc-400">Iterations/sec</p>
+                    <p className="font-mono text-2xl font-bold text-accent">{">"}10K+</p>
+                    <p className="font-mono text-xs text-zinc-400">It/sec</p>
                   </div>
 
                   <div className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4">
@@ -405,7 +405,7 @@ export default function Portfolio() {
                       <span className="font-mono text-xs text-zinc-500">Precision</span>
                     </div>
                     <p className="font-mono text-2xl font-bold text-blue-400">10⁻⁶</p>
-                    <p className="font-mono text-xs text-zinc-400">Error margin</p>
+                    <p className="font-mono text-xs text-zinc-400">Target Precision</p>
                   </div>
                 </div>
               </div>
