@@ -140,4 +140,25 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .code-container-mobile {
+    max-width: 85vw;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .code-container-mobile::-webkit-scrollbar {
+    display: none;
+  }
 }

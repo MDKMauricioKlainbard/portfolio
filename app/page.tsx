@@ -108,7 +108,7 @@ export default function Portfolio() {
 
           {/* Right Side - Code Visualization */}
           <motion.div variants={fadeInUp} className="relative">
-            <div className="relative rounded-xl border border-accent/30 bg-zinc-900/50 p-6 backdrop-blur-sm">
+            <div className="relative rounded-xl border border-accent/30 bg-zinc-900/50 p-6 backdrop-blur-sm overflow-hidden">
               <div className="mb-4 flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <div className="h-3 w-3 rounded-full bg-red-500/80" />
@@ -118,7 +118,7 @@ export default function Portfolio() {
                 <span className="ml-2 font-mono text-xs text-accent">LagrangianSystem.hpp</span>
               </div>
 
-              <pre className="overflow-x-auto font-mono text-sm leading-relaxed">
+              <pre className="code-container-mobile font-mono text-sm leading-relaxed">
                 <code className="text-zinc-300">
                   <span className="text-purple-400">class</span>{" "}
                   <span className="text-blue-400">LagrangianSystem</span> {"{"}
@@ -300,7 +300,7 @@ export default function Portfolio() {
 
           <div className="relative overflow-hidden rounded-xl border border-accent/30 bg-zinc-900/50 backdrop-blur-sm">
             {/* Blueprint Grid Background */}
-            <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
               <div
                 className="h-full w-full"
                 style={{
@@ -311,7 +311,7 @@ export default function Portfolio() {
               />
             </div>
 
-            <div className="relative grid gap-8 p-8 lg:grid-cols-[1fr_1.2fr] lg:p-12">
+            <div className="relative grid gap-8 p-8 lg:grid-cols-[1fr_1.2fr] lg:p-12 overflow-hidden">
               {/* Left - Project Info */}
               <div className="space-y-6">
                 <div>
@@ -367,8 +367,8 @@ export default function Portfolio() {
               </div>
 
               {/* Right - Code Dashboard */}
-              <div className="space-y-4">
-                <div className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4">
+              <div className="space-y-4 overflow-hidden">
+                <div className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4 overflow-hidden">
                   <div className="mb-3 flex items-center justify-between">
                     <span className="font-mono text-xs text-accent">LagrangianSystem.cpp</span>
                     <div className="flex gap-1">
@@ -377,7 +377,7 @@ export default function Portfolio() {
                       <div className="h-2 w-2 rounded-full bg-red-500" />
                     </div>
                   </div>
-                  <pre className="overflow-x-auto font-mono text-xs leading-relaxed text-zinc-300">
+                  <pre className="code-container-mobile font-mono text-xs leading-relaxed text-zinc-300">
                     {`void LagrangianSystem::step_integration(
   double dt
 ) {
